@@ -9,6 +9,7 @@ public class CarGroup {
 
     private final List<Car> cars;
 
+
     public CarGroup(List<Car> cars) {
         this.cars = cars;
     }
@@ -36,9 +37,11 @@ public class CarGroup {
     }
 
     public void printCarsMovement() {
+
         for (Car car : cars) {
             System.out.println(car.printMovement());
         }
+        System.out.println("\n");
     }
 
     void movementShorting() {
