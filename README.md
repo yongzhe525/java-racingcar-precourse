@@ -16,23 +16,27 @@
   * moveCar : isMove함수를 통해 전진/정지 결과 저장
   * getMovement : 차량 이동 정보 반환
   * printMovement : 차량 이동 상황 출력
+  * getName : 차량 명칭 출력
+  * setLength : 차량 이동거리 강제 입력 for 테스트 
   
 * CarGroup : Car 객체들을 관리하는 클래스
   * Cars : List<Car> 차량 객체를 관리하는 collection 클래스 생성
   * CarGroup : 차량 객체를 관리하는 그룹을 생성하는 생성자
-  * isMoveCars : 차량 객체 전진 여부 판단
-  * moveCars : 차량객체 전진/정지 결과 저장
+  * moveCars : 차량객체 전진
+  * carsMovementProcess : 차량 객체 전진/정지 상태 저장 
   * movementShorting : 차량 객체 이동 현황 정렬
   * getMaximunMovement : 차량 객체중 최대 이동 거리 구하기
   * printCarsMovement : 차량 이동 상황 출력 
   * getWinners : 최대 이동거리 기반으로 최종 우승자 찾기
+  * getCarListWithPredicate : predicate 조건에 만족하는 차량만 최종 저장해주는 기능
   
 * RaceGame :  경주게임 제어 class
   * start : 시작
   * getCarNames : 사용자가 입력한 경주할 자동차 이름을 처리하는 기능 (쉼표처리 포함)
   * getRaceCount : 사용자가 입력한 시도한 회수 구하는 메소드
   * printWinners : 최종 우승자 출력 
-
+* run : 경주게임 시작, 최종 값 리턴
+  
 * Main : application 동작 클래스
   * main : application 실행
 
