@@ -39,6 +39,20 @@ public class RaceGameTest {
     }
 
     @Test
+    @DisplayName("스페이스가 들어간 차량 이름 조회 메소드 확인하는 테스트")
+    public void getCarNamesWithSpaceTest() {
+        String[] names = new String[]{"K3", "K5", "K7", "G70", "G80"};
+        String invalidCarNames = "K3, K5, K7, G70, G80";
+        Scanner scanner = new Scanner(invalidCarNames);
+        RaceGame raceGame = new RaceGame();
+        String[] carNames = raceGame.getCarNames(scanner);
+        for (int index = 0; index < carNames.length; index++) {
+            Assertions.assertThat(names[index]).isEqualTo(carNames[index]);
+        }
+        scanner.close();
+    }
+
+    @Test
     @DisplayName("경주 시도 회수 조회 메소드 확인하는 테스트")
     public void getTryCountTest() {
         Scanner scanner = new Scanner(tryCount);

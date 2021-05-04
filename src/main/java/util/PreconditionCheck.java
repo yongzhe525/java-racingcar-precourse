@@ -10,8 +10,7 @@ public class PreconditionCheck {
             Integer.valueOf(String.valueOf(times));
         } catch (Exception e) {
             System.out.println(INVALID_NUMBER);
-            return false;
-        }
+    }
         return true;
     }
 

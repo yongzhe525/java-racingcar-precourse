@@ -18,7 +18,7 @@ public class PreconditionCheckTest {
 
     @Test
     @DisplayName("차량 이름 입력 정상 여부 확인")
-    public void isValidCarNameTest() {
+    public void isValidCarNameForSizeTest() {
         String[] validCarNames = new String[]{"K3", "K5", "K7", "G70", "G80"};
         String[] inValidCarNames = new String[]{"K3", "K5", "abc123", "A123!", "A12345!"};
         assertThat(PreconditionCheck.isValidCarName(validCarNames)).isTrue();

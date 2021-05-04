@@ -17,6 +17,7 @@ public class RaceGame {
         String[] splitedCarNames;
         do {
             String carNames = scanner.next();
+            carNames = carNames.replaceAll("(^\\p{Z}+|\\p{Z}+$)", "");
             splitedCarNames = carNames.split(",");
         } while (!PreconditionCheck.isValidCarName(splitedCarNames));
         return splitedCarNames;
