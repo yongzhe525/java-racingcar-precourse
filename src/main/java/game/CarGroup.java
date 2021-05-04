@@ -13,9 +13,25 @@ public class CarGroup {
         this.cars = cars;
     }
 
+    public CarGroup(String[] carNames) {
+        List<Car> cars = new ArrayList<>();
+        for (String carName : carNames) {
+            cars.add(new Car(carName));
+        }
+        this.cars = cars;
+    }
+
     public void moveCars() {
         for (Car car : cars) {
             car.moveCar();
+        }
+    }
+
+    void carsMovementProcess(){
+        for (Car car : cars) {
+            if (car.isMove()){
+                car.moveCar();
+            }
         }
     }
 
