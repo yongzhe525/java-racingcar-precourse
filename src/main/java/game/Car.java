@@ -14,24 +14,28 @@ public class Car {
         this.length = 0;
     }
 
-    boolean isMove() {
-        return getRandomValue() >= GO_STOP_VALUE;
-    }
-
-    void moveCar() {
-        this.length ++;
+    String getName() {
+        return this.name;
     }
 
     int getMovement() {
         return this.length;
     }
 
-    int getRandomValue() {
-        return random.nextInt(10);
-    }
-
     void setLength(int value) {
         this.length = value;
+    }
+
+    boolean isMove() {
+        return getRandomValue() >= GO_STOP_VALUE;
+    }
+
+    void moveCar() {
+        this.length++;
+    }
+
+    int getRandomValue() {
+        return random.nextInt(10);
     }
 
     String printMovement() {

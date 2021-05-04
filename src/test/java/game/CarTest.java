@@ -35,6 +35,22 @@ public class CarTest {
     }
 
     @ParameterizedTest
+    @ValueSource(strings = {"G70", "G80"})
+    @DisplayName(value = "차량 정상 이동 여부 확인 테스트")
+    public void getNameAndMovementTest(String carName) {
+        Car car = new Car(carName);
+        int moveCount = 0;
+        for (int index = 0; index < 10; index++) {
+            if (car.isMove()) {
+                car.moveCar();
+                moveCount++;
+            }
+        }
+        assertThat(car.getMovement()).isEqualTo(moveCount);
+        assertThat(car.getName()).isEqualTo(carName);
+    }
+
+    @ParameterizedTest
     @ValueSource(strings = {"G80"})
     @DisplayName(value = "차량 이동 진행 상태 출력 테스트")
     public void printMovementTest(String carName) {
