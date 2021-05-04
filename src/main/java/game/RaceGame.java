@@ -1,5 +1,7 @@
 package game;
 
+import util.PreconditionCheck;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,15 +15,19 @@ public class RaceGame {
     String[] getCarNames(Scanner scanner) {
         System.out.println(PLAY_GET_NAME);
         String[] splitedCarNames;
-        String carNames = scanner.next();
-        splitedCarNames = carNames.split(",");
+        do {
+            String carNames = scanner.next();
+            splitedCarNames = carNames.split(",");
+        } while (!PreconditionCheck.isValidCarName(splitedCarNames));
         return splitedCarNames;
     }
 
     int getRaceCount(Scanner scanner) {
         System.out.println(PLAY_GET_RACE_COUNT);
         String strTryCount;
-        strTryCount = scanner.next();
+        do {
+            strTryCount = scanner.next();
+        } while (!PreconditionCheck.isValidRaceCount(strTryCount));
         return Integer.valueOf(strTryCount);
     }
 
