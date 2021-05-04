@@ -44,6 +44,3 @@
   * isValidRaceCount : 입력 받은 race 시도 회수에 대한 정합성 체크
   * isValidCarNames : 5자 이하, 쉼표 구분 가능한 string인지 정합성 체크
   
-* Exception : 예외처리
-  * NotValidRaceCountException : race 시도 횟수에 대한 오류 발생
-  * NotValidCarNamesException : 잘못된 이름에 대한 오류 발생
