@@ -30,6 +30,10 @@ public class Car {
         return random.nextInt(10);
     }
 
+    void setLength(int value) {
+        this.length = value;
+    }
+
     String printMovement() {
         StringBuffer movement = new StringBuffer();
         for (int i = 0; i < length; i++) {
